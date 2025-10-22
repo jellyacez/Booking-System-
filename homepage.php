@@ -37,7 +37,7 @@ $title = "Home Page";
         <div class="title-block">
             <h1>Pampanga State University</h1>
             <h2>Interactive Map</h2>
-
+<!-- For debug purposes -->
         <div id="debugInfo" style="
           position: fixed;
           bottom: 10px;
@@ -86,3 +86,4 @@ $title = "Home Page";
 
 
 </html>
+
