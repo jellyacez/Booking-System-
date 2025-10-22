@@ -43,9 +43,10 @@ $totalLogs = $conn->query("SELECT COUNT(*) FROM audit_logs")->fetchColumn();
                 <li><a href="manage_users.php">User Management</a></li>
                 <li><a href="settings.php">Settings</a></li>
                 <li><a href="logout.php">Logout</a></li>
+                <li>w</li>
             </ul>
         </div>
-    </div>
+    </div>    
 </body>
 
 </html>
@@ -66,4 +67,5 @@ $totalLogs = $conn->query("SELECT COUNT(*) FROM audit_logs")->fetchColumn();
         echo " <tr><td>{$row['id']}</td><td>{$row['username']}</td><td>{$row['email']}</td><td>{$row['created_at']}</td></tr>";
     }
     ?>
+
 </table>
