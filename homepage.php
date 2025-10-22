@@ -37,6 +37,20 @@ $title = "Home Page";
         <div class="title-block">
             <h1>Pampanga State University</h1>
             <h2>Interactive Map</h2>
+
+        <div id="debugInfo" style="
+          position: fixed;
+          bottom: 10px;
+          left: 10px;
+          background: rgba(0,0,0,0.6);
+          color: white;
+          padding: 6px 10px;
+          font-size: 12px;
+          border-radius: 6px;
+          font-family: monospace;
+          z-index: 9999;">
+
+</div>
         </div>
     </header>
     <!-- This is the nav panel content! :\ -->
@@ -69,5 +83,6 @@ $title = "Home Page";
         <p>&copy; We used AI for upscaler</p>
     </footer>
 </body>
+
 
 </html>
