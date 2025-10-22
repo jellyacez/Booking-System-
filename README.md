@@ -1,2 +1,8 @@
-# itelec2
-YOU CANT DO THIS TO ME KEV
+#ITELEC 2 Project - Final
+
+PSU Interactive Map
+
+Inspired by the Satisfactory Interactive Map.
+
+In progress
+
