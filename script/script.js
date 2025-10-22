@@ -19,7 +19,7 @@ box.addEventListener("mousedown", (e) => {
   startX = e.clientX - currentX * scale;
   startY = e.clientY - currentY * scale;
 });
-
+const bubby = [];
 document.addEventListener("mouseup", () => {
   if (!isDragging) return;
   isDragging = false;
