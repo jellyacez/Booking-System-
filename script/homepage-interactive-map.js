@@ -7,8 +7,8 @@ let currentX = 0,
   currentY = 0;
 let scale = 1;
 const minScale = 1;
-const maxScale = 2.5;
-const overflowAllowance = 20; // Pixels allowed for blank or overflow
+const maxScale = 5;
+const overflowAllowance = 100; // Pixels allowed for blank or overflow
 
 box.addEventListener("mousedown", (e) => {
   e.preventDefault();
@@ -50,13 +50,18 @@ document.addEventListener("mouseup", () => {
   }, 300);
 });
 
+const debug = document.getElementById("debugInfo");
+
 document.addEventListener("mousemove", (e) => {
   if (!isDragging) return;
   e.preventDefault();
 
-  // Calculate drag offset, adjusted for scale
   currentX = (e.clientX - startX) / scale;
   currentY = (e.clientY - startY) / scale;
+  updateTransform();
+
+  // update debug box
+  debug.textContent = `Mouse: ${e.clientX}, ${e.clientY} | Offset: ${currentX.toFixed(1)}, ${currentY.toFixed(1)} | Scale: ${scale.toFixed(2)}`;
 
   // Clamp to bounds
   const { minX, maxX } = getBoundsX();
@@ -82,13 +87,15 @@ box.addEventListener("wheel", (e) => {
   if (scale > maxScale) scale = maxScale;
 
   // If zooming out to minScale, reset position to center
-  if (e.deltaY < 0 && scale <= minScale) {
-    currentX = 0;
-    currentY = 0;
-    img.style.transition = "transform 0.3s ease";
-    setTimeout(() => {
-      img.style.transition = "";
-    }, 300);
+  if (scale === minScale) {
+            currentX = 0;
+            currentY = 0;
+            img.style.transition = 'transform 0.3s ease';
+            updateTransform();
+            setTimeout(() => {
+                img.style.transition = '';
+            }, 300);
+        
   }
 
   // Clamp position to new bounds after scale change
@@ -101,6 +108,8 @@ box.addEventListener("wheel", (e) => {
   currentY = Math.max(
     minY - overflowAllowance,
     Math.min(currentY, maxY + overflowAllowance)
+
+
   );
 
   updateTransform();
@@ -113,7 +122,7 @@ function updateTransform() {
 function getBoundsX() {
   const scaledWidth = img.clientWidth * scale;
   const containerWidth = box.clientWidth;
-  const halfDiff = Math.abs(scaledWidth - containerWidth) / 2;
+  const halfDiff = Math.abs(scaledWidth - containerWidth) / 0.5;
   const minX = -halfDiff;
   const maxX = halfDiff;
   return { minX, maxX };
@@ -122,7 +131,7 @@ function getBoundsX() {
 function getBoundsY() {
   const scaledHeight = img.clientHeight * scale;
   const containerHeight = box.clientHeight;
-  const halfDiff = Math.abs(scaledHeight - containerHeight) / 2;
+  const halfDiff = Math.abs(scaledHeight - containerHeight) / 0.5;
   const minY = -halfDiff;
   const maxY = halfDiff;
   return { minY, maxY };
