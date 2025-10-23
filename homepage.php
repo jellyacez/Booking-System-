@@ -55,11 +55,18 @@ $title = "Home Page";
     </header>
     <!-- This is the nav panel content! :\ -->
     <nav>
+        <div class="nav-left">
+ <button class="open-btn" onclick="openNav()" style="background-color: #800000;">&#9776;</button>
         <a href="#">Home</a>
         <a href="#">About</a>
         <a href="#">Contact</a>
         <i class="fa-solid fa-bell"></i>
+        </div>
+       <div nav-right>
+        <input type="text" id="searchInput" >
         <button class="searchtab"><i class="fa fa-search"></i></button>
+       </div>
+        
     </nav>
     <main>
         <div class="content">
@@ -86,4 +93,5 @@ $title = "Home Page";
 
 
 </html>
+
 
