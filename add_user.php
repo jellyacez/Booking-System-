@@ -10,7 +10,7 @@ if (isset($_POST['add'])) {
     $stmt = $conn->prepare($sql);
     $stmt->execute([':username' => $username, ':email' => $email, ':password' => $password, ':role' => $role]);
 
-    echo "you are now pregnant";
+    echo "User added successfully";
 }
 ?>
 <form method="POST">
@@ -20,4 +20,5 @@ if (isset($_POST['add'])) {
     Role <select name="Role">
         <option value="user"></option>
         <option value="admin"></option>
+
 </form>
