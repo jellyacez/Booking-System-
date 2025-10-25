@@ -27,12 +27,13 @@ if (isset($_POST['register'])) {
     $email = $_POST['email'];
     $password = password_hash($_POST['password'], PASSWORD_DEFAULT);
 
-    $sql = "INSERT INTO users(username, email, password) values(:username, :email, :password)";
+    $sql = "INSERT INTO users(username, email, password) values(:username, :email, :password, :role)";
     $stmt = $conn->prepare($sql);
-    $stmt->execute([':username' => $username, ':email' => $email, ':password' => $password]);
+    $stmt->execute([':username' => $username, ':email' => $email, ':password' => $password, ':role' => 'user']);
 
     echo "Registration Complete you can now <a href = 'login.php'>login</a>";
 }
 ?>
+
 
 </html>
