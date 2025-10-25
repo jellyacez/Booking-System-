@@ -54,7 +54,7 @@ if (isset($_POST['login'])) {
 
     if ($user && password_verify($_POST['password'], $user['password'])) {
         $_SESSION['user'] = $user['username'];
-        header("Location: dashboard.php");
+        header("Location: homepage.php");
         exit;
     } else {
         echo "X Invalid username or password!";
@@ -63,5 +63,6 @@ if (isset($_POST['login'])) {
 
 
 ?>
+
 
 
