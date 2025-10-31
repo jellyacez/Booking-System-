@@ -23,8 +23,8 @@ $totalLogs = $conn->query("SELECT COUNT(*) FROM audit_logs")->fetchColumn();
     <title>System Dashboard</title>
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="../css/dashboard.css">
     <link rel="stylesheet" href="../css/stylesheet.css">
+    <link rel="stylesheet" href="../css/dashboard.css">
 
 </head>
 
@@ -60,30 +60,32 @@ $totalLogs = $conn->query("SELECT COUNT(*) FROM audit_logs")->fetchColumn();
     <script>
 
     </script>
+
+
+    <h3>Total Users</h3>
+
+    <h3>Active Users</h3>
+
+    <h3>Recent Users</h3>
+    <table style="border: 1;" cellpadding>
+        <tr>
+            <th>ID</th>
+            <th>Username</th>
+            <th>Email</th>
+            <th>Date Registered</th>
+        </tr>
+
+        <?php
+        $stmt = $conn->query("SELECT * FROM users ORDER BY created_at DESC LIMIT 5");
+        while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
+            echo " <tr><td>{$row['id']}</td><td>{$row['username']}</td><td>{$row['email']}</td><td>{$row['created_at']}</td></tr>";
+        }
+        ?>
+
+    </table>
+
 </body>
 
 
 
 </html>
-
-<h3>Total Users</h3>
-
-<h3>Active Users</h3>
-
-<h3>Recent Users</h3>
-<table style="border: 1;" cellpadding>
-    <tr>
-        <th>ID</th>
-        <th>Username</th>
-        <th>Email</th>
-        <th>Date Registered</th>
-    </tr>
-
-    <?php
-    $stmt = $conn->query("SELECT * FROM users ORDER BY created_at DESC LIMIT 5");
-    while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
-        echo " <tr><td>{$row['id']}</td><td>{$row['username']}</td><td>{$row['email']}</td><td>{$row['created_at']}</td></tr>";
-    }
-    ?>
-
-</table>

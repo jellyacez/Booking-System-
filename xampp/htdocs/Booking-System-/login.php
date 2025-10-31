@@ -27,7 +27,7 @@ session_start();
             <h1>LOGIN</h1>
 
             <div class="input-group">
-                <label for="em">USERNAME</label>
+                <label for="em"></label>
                 <input type="text" name="username" id="username" required>
             </div>
 

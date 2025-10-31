@@ -1,3 +1,9 @@
+body {
+  top: -30px;
+  background-color: #0000;
+  color: #fff;
+}
+
 table {
   border-collapse: collapse;
   width: 80%;

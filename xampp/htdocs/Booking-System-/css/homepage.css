@@ -22,7 +22,7 @@ main {
 }
 
 .map-container {
-  width: 100%; /* or 125vh like you had, this is cleaner */
+  width: 50vw; /* or 125vh like you had, this is cleaner */
   height: 70vh;
   overflow: hidden;
   border: 2px solid #333;
