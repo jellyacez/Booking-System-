@@ -2,21 +2,20 @@
   --leftballs: brown;
   --rightballs: black;
 }
-body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  background-color: #f4f4f4;
-  color: #333;
-}
+
 header {
   background: #333;
   color: #fff;
   padding: 10px;
   display: flex;
   align-items: center;
+  text-align: center;
   gap: 20px;
 }
-
+h1 {
+  text-align: center;
+  justify-content: center;
+}
 footer {
   background: #333;
   color: #fff;
@@ -62,9 +61,13 @@ footer {
 nav {
   background: #800000;
   padding: 0.5rem;
-
   box-shadow: black;
   color: gold;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #800000;
+  padding: 8px 16px;
 }
 nav a {
   color: gold;
@@ -80,81 +83,6 @@ nav a:hover {
   background-color: red;
 }
 
-.title-block {
-  flex: 1; /* takes full width */
-  text-align: center; /* centers the text */
-  color: gold;
-}
-main {
-  display: flex;
-  padding: 20px;
-  background-color: #333;
-}
-
-.content {
-  width: 100%;
-  display: flex;
-  justify-content: flex-start; /* LEFT SIDE */
-}
-
-.map-container {
-  width: 50vw; /* or 125vh like you had, this is cleaner */
-  height: 70vh;
-  overflow: hidden;
-  border: 2px solid #333;
-  position: relative;
-  cursor: grab;
-  background: white; /* white space around image */
-
-  border-radius: 10px;
-}
-
-.map-container img {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%) scale(1);
-  max-width: 100%;
-  max-height: 100%;
-  object-fit: contain;
-  user-select: none;
-  transition: transform 0.2s ease;
-}
-
-.interactive-container {
-  width: 80vw;
-  height: 70vh;
-  overflow: hidden;
-  border: 2px solid #333;
-  position: relative;
-  cursor: grab;
-  border-radius: 10px;
-  background-color: #444;
-}
-
-.searchtab {
-  display: flex-box;
-  justify-content: flex-end;
-}
-.searchtab:hover {
-  cursor: pointer;
-}
-
-.header-container {
-  color: white;
-  text-decoration: none;
-  font-weight: bold;
-  padding: 8px 20px;
-  display: inline-block;
-}
-
-nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: #800000;
-  padding: 8px 16px;
-}
 .nav-left {
   display: flex;
   align-items: center;
@@ -164,4 +92,18 @@ nav {
   display: flex;
   align-items: center;
   gap: 6px;
+}
+
+.title-block {
+  flex: 1; /* takes full width */
+  text-align: center; /* centers the text */
+  color: gold;
+}
+
+.searchtab {
+  display: flex-box;
+  justify-content: flex-end;
+}
+.searchtab:hover {
+  cursor: pointer;
 }

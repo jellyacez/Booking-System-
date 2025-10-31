@@ -24,14 +24,14 @@ $totalLogs = $conn->query("SELECT COUNT(*) FROM audit_logs")->fetchColumn();
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="../css/dashboard.css">
-    <link rel="stylesheet" href="../css/homepage.css">
+    <link rel="stylesheet" href="../css/stylesheet.css">
 
 </head>
 
 <body>
     <div class="container">
-        <header>
-            <h2>Welcome, <?= $_SESSION['user']; ?>!</h2>
+        <header id="navbar">
+            <h1>Welcome, <?= $_SESSION['user']; ?>!</h1>
 
         </header>
         <p>Your role: <strong><?= $_SESSION['role']; ?></strong></p>
@@ -44,6 +44,7 @@ $totalLogs = $conn->query("SELECT COUNT(*) FROM audit_logs")->fetchColumn();
                 <h3>Audit Logs: <?= $totalLogs; ?></h3>
             </div>
         </div>
+        <!--Gawin Menu nalang to? Like Side Nav or Nav Bar  Here-->
         <div class="card">
             <h3> Quick Links</h3>
             <ul>
@@ -54,6 +55,7 @@ $totalLogs = $conn->query("SELECT COUNT(*) FROM audit_logs")->fetchColumn();
 
             </ul>
         </div>
+        <!-- Up to here -->
     </div>
     <script>
 
@@ -64,6 +66,9 @@ $totalLogs = $conn->query("SELECT COUNT(*) FROM audit_logs")->fetchColumn();
 
 </html>
 
+<h3>Total Users</h3>
+
+<h3>Active Users</h3>
 
 <h3>Recent Users</h3>
 <table style="border: 1;" cellpadding>

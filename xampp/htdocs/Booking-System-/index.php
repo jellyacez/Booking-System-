@@ -11,6 +11,7 @@ $title = "Home Page";
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><?php echo $title; ?></title>
 
+    <link rel="stylesheet" href="./css/stylesheet.css">
     <link rel="stylesheet" href="./css/homepage.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
@@ -77,17 +78,27 @@ $title = "Home Page";
                 <img src="./img/psumap.png" id="mapImg" alt="No image">
             </div>
         </div>
-        <div class="interactive-container">
 
-            <div class="header-container">
-                <a href="#">Dot</a>
-            </div>
-
-        </div>
         <!-- Script for the entirety :\ -->
         <script src="script/homepage-interactive-map.js"></script>
 
+
+
+
     </main>
+
+    <div class="parent">
+        <div class="div1">222</div>
+        <div class="div2">2</div>
+        <div class="div3">3</div>
+        <div class="div7">7</div>
+        <div class="div8">8</div>
+        <div class="div9">9</div>
+        <div class="div10">10</div>
+        <div class="div11">11</div>
+        <div class="div12">12</div>
+        <div class="div13">13</div>
+    </div>
 
     <footer>
         <p>&copy; 2025 Copyright</p>

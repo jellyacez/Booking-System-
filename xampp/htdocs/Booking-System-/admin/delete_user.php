@@ -1,6 +1,7 @@
 <?php
 // deletes user from the database
 require('../db.php');
+session_start();
 $id = $_GET['id'];
 
 $stmt = $conn->prepare("DELETE FROM users where id=:id");

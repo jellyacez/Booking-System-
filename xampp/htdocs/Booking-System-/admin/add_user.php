@@ -20,6 +20,7 @@ if ($_SESSION['role'] != 'admin') {
 </head>
 
 <body style="background-color:wheat;">
+    <!--Add User From Admin-->
     <form method="POST">
         Username: <input type="text" required name="username"> <br><br>
         Email: <input type="email" required name="email"> <br><br>
@@ -33,12 +34,14 @@ if ($_SESSION['role'] != 'admin') {
 
         <button type="submit" name="adduser">ADD</button>
     </form>
+    <!--End of Add User-->
     <a href="manage_users.php">go back</a>
 </body>
 
 </html>
 
 <?php
+//Process the Add User Form
 if (isset($_POST['adduser'])) {
     $username = $_POST['username'];
     $email = $_POST['email'];

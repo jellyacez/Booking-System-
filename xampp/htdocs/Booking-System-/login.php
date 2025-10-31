@@ -20,13 +20,14 @@ session_start();
             <h1><span class="title">Pampanga State University</span></h1>
         </header>
     </div>
+
     <div class="login-container">
         <form method="POST">
 
             <h1>LOGIN</h1>
 
             <div class="input-group">
-                <label for="em"></label>
+                <label for="em">USERNAME</label>
                 <input type="text" name="username" id="username" required>
             </div>
 

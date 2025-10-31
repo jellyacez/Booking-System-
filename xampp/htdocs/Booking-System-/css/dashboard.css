@@ -11,12 +11,42 @@ td {
 
 a {
   text-decoration: none;
-  color: blue;
+  color: black;
 }
 
 ul {
   list-style: none;
 }
 body {
-  background-color: wheat;
+  background-color: white;
+}
+
+#navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background:/*  #0d3b66; */ #112a4b;
+  padding: 0.5rem 0;
+  z-index: 2;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  justify-content: center;
+}
+
+ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+}
+
+ul li {
+  margin: 0 1.5rem;
+  font-weight: bold;
+}
+
+h1 {
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+  font-size: 30px;
 }
