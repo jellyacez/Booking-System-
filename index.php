@@ -19,6 +19,7 @@ $title = "Home Page";
         function openNav() {
             document.getElementById('sidebar').style.width = '250px';
         }
+        s
 
         function closeNav() {
             document.getElementById('sidebar').style.width = '0';
