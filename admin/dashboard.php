@@ -32,7 +32,13 @@ $totalLogs = $conn->query("SELECT COUNT(*) FROM audit_logs")->fetchColumn();
     <div class="container">
         <header id="navbar">
             <h1>Welcome, <?= $_SESSION['user']; ?>!</h1>
+            <ul>
+                <li><a href="manage_users.php">User Management</a></li>
+                <li><a href="settings.php">Settings</a></li>
+                <li><a href="audit_logs.php">Audit Logs</a></li>
+                <li><a id="lgOutbtn" href="../logout.php">Logout</a></li>
 
+            </ul>
         </header>
         <p>Your role: <strong><?= $_SESSION['role']; ?></strong></p>
         <div class="grid">
@@ -47,13 +53,7 @@ $totalLogs = $conn->query("SELECT COUNT(*) FROM audit_logs")->fetchColumn();
         <!--Gawin Menu nalang to? Like Side Nav or Nav Bar  Here-->
         <div class="card">
             <h3> Quick Links</h3>
-            <ul>
-                <li><a href="manage_users.php">User Management</a></li>
-                <li><a href="settings.php">Settings</a></li>
-                <li><a href="audit_logs.php">Audit Logs</a></li>
-                <li><a id="lgOutbtn" href="../logout.php">Logout</a></li>
 
-            </ul>
         </div>
         <!-- Up to here -->
     </div>
