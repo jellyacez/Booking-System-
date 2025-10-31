@@ -41,33 +41,38 @@ $totalLogs = $conn->query("SELECT COUNT(*) FROM audit_logs")->fetchColumn();
             </ul>
         </header>
         <p>Your role: <strong><?= $_SESSION['role']; ?></strong></p>
-        <div class="grid">
-            <div class="card">
-                <h3>Total Users: <?= $totalUsers; ?></h3>
-
-            </div>
-            <div class="card">
-                <h3>Audit Logs: <?= $totalLogs; ?></h3>
-            </div>
-        </div>
-        <!--Gawin Menu nalang to? Like Side Nav or Nav Bar  Here-->
+        <br
+            <div class="grid">
         <div class="card">
+            <h3>Total Users: <?= $totalUsers; ?></h3>
+
+        </div>
+        <div class="card">
+            <h3>Audit Logs: <?= $totalLogs; ?></h3>
+        </div>
+    </div>
+    <!-- Gawin Menu nalang to? Like Side Nav or Nav Bar  Here-->
+    <!-- <div class="card">
             <h3> Quick Links</h3>
 
-        </div>
-        <!-- Up to here -->
+        </div> -->
+    <!-- Up to here -->
     </div>
-    <script>
+    <fieldset>
+        <legend>
+            <h3>Total Users</h3>
+        </legend>
+    </fieldset>
+    <fieldset>
+        <legend>
+            <h3>Active Users</h3>
+        </legend>
+    </fieldset>
 
-    </script>
-
-
-    <h3>Total Users</h3>
-
-    <h3>Active Users</h3>
-
-    <h3>Recent Users</h3>
-    <table style="border: 1;" cellpadding>
+    <legend>
+        <h3>Recent Users</h3>
+    </legend>
+    <table cellpadding>
         <tr>
             <th>ID</th>
             <th>Username</th>
@@ -85,7 +90,5 @@ $totalLogs = $conn->query("SELECT COUNT(*) FROM audit_logs")->fetchColumn();
     </table>
 
 </body>
-
-
 
 </html>

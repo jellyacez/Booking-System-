@@ -22,16 +22,16 @@ ul {
   top: 0;
   width: 100%;
   background:/*  #0d3b66; */ #112a4b;
-  padding: 0.5rem 0;
   z-index: 2;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-  text-align: center;
-  justify-content: center;
+  text-align: left;
+  justify-content: left;
 }
 
 ul {
   display: flex;
   justify-content: center;
+  align-items: center;
   list-style: none;
   /* color: #fff; */
 }
@@ -42,6 +42,7 @@ ul li {
 }
 
 h1 {
+  padding-left: 0.5rem;
   text-decoration: none;
   /* color: #fff; */
   font-weight: bold;
@@ -49,7 +50,17 @@ h1 {
 }
 
 body {
-  top: 3rem;
-  background-color: black;
+  bottom: 30rem;
+  background: linear-gradient(50deg, #535050, black, #0e79b2, black, #535050);
   color: white;
+}
+
+h3 {
+  font-size: 25px;
+}
+fieldset {
+  border-radius: 10px;
+  border-color: #97dffc;
+  background-color: rgba(48, 47, 47, 0.1);
+  box-shadow: 0 4px 8px 0 rgb(5, 5, 5), 0 6px 20px 0 #0e79b2;
 }

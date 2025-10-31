@@ -68,17 +68,18 @@ session_start();
         ?>
         <div class="divider">OR</div>
 
-        <div class="social-login">
-            <div class="social-btn">G</div>
-            <div class="social-btn">F</div>
-            <div class="social-btn">X</div>
+        <div class="alternative-login">
+            <div class="social-login">
+                <div class="social-btn">G</div>
+                <div class="social-btn">F</div>
+                <div class="social-btn">X</div>
+            </div>
+
+
+            <div class="footer">
+                Don't have an account? <a href="register.php">Sign up</a>
+            </div>
         </div>
-
-
-        <div class="footer">
-            Don't have an account? <a href="register.php">Sign up</a>
-        </div>
-
     </div>
 
 </body>
