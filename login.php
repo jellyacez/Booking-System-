@@ -17,7 +17,7 @@ session_start();
 <body class="login-body">
     <div>
         <header>
-            <h1><span class="title">Pampanga State University</span></h1>
+            <h1>Pampanga State University</h1>
         </header>
     </div>
 
@@ -27,7 +27,7 @@ session_start();
             <h1>LOGIN</h1>
 
             <div class="input-group">
-                <label for="em"></label>
+                <label for="em">USERNAME</label>
                 <input type="text" name="username" id="username" required>
             </div>
 
@@ -68,7 +68,7 @@ session_start();
         ?>
         <div class="divider">OR</div>
 
-        <div class="alternative-login">
+        <div class="alternate-login">
             <div class="social-login">
                 <div class="social-btn">G</div>
                 <div class="social-btn">F</div>

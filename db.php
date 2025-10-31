@@ -8,5 +8,3 @@ try {
 } catch (PDOException $e) {
     echo "connection failed " . $e->getMessage();
 }
-
-
