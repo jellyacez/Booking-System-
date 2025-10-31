@@ -1,0 +1,109 @@
+:root {
+  --leftballs: brown;
+  --rightballs: black;
+}
+
+header {
+  background: #333;
+  color: #fff;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  gap: 20px;
+}
+h1 {
+  text-align: center;
+  justify-content: center;
+}
+footer {
+  background: #333;
+  color: #fff;
+  text-align: center;
+  padding: 0.5vh;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+.sidebar {
+  height: 100%;
+  width: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #444;
+  overflow-x: hidden;
+  transition: 0.3s;
+  padding-top: 60px;
+  z-index: 1000;
+}
+.sidebar a {
+  padding: 10px 15px;
+  text-decoration: none;
+  color: #fff;
+  display: block;
+}
+.open-btn {
+  font-size: 20px;
+  cursor: pointer;
+  background: #333;
+  color: #fff;
+  padding: 10px 15px;
+  border: none;
+}
+.open-btn:hover {
+  padding: 10px 15px;
+  text-decoration: none;
+  color: #fff;
+  display: block;
+  background-color: #555;
+}
+nav {
+  background: #800000;
+  padding: 0.5rem;
+  box-shadow: black;
+  color: gold;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #800000;
+  padding: 8px 16px;
+}
+nav a {
+  color: gold;
+  justify-content: right;
+
+  text-decoration: none;
+  font-weight: bold;
+  padding: 8px 20px;
+  display: inline-block;
+}
+
+nav a:hover {
+  background-color: red;
+}
+
+.nav-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.title-block {
+  flex: 1; /* takes full width */
+  text-align: center; /* centers the text */
+  color: gold;
+}
+
+.searchtab {
+  display: flex-box;
+  justify-content: flex-end;
+}
+.searchtab:hover {
+  cursor: pointer;
+}
