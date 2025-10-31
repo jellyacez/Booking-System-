@@ -1,0 +1,68 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+header {
+
+    width: 100%;
+    min-height: 49px;
+    z-index: 9999;
+    line-height: 25%;
+    background: black;
+    color: white;
+    padding: 10px 0;
+      gap: 20px;
+
+
+}
+
+header h1 {
+    margin: 0; 
+    padding: 0;
+}
+
+main {
+    padding-top: 69px;
+    display: flex;
+}
+
+.side-panel {
+    background-color: #555;
+    width: 25%;
+    min-width: 200px;
+    height: calc(100vh - 69px);
+    float: left; 
+}
+
+.page-container {
+    background-color: #555;
+    width: 75%;
+    height: calc(100vh - 69px); 
+    float: right;
+}
+
+.Olsidebar {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #444;
+  overflow-x: hidden;
+  transition: 0.3s;
+  padding-top: 60px;
+  z-index: 1000;
+
+}
+.Olsidebar a {
+      padding: 10px 15px;
+  text-decoration: none;
+  color: #fff;
+  display: block;
+}
+.Olnav-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}

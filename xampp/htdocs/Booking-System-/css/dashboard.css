@@ -1,0 +1,22 @@
+table {
+  border-collapse: collapse;
+  width: 80%;
+}
+
+th,
+td {
+  padding: 8px;
+  border: 1px solid #ccc;
+}
+
+a {
+  text-decoration: none;
+  color: blue;
+}
+
+ul {
+  list-style: none;
+}
+body {
+  background-color: wheat;
+}
